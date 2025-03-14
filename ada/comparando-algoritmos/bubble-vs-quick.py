@@ -1,8 +1,8 @@
 import copy
 import random
-from memory_profiler import memory_usage
+from memory_profiler import memory_usage # type: ignore
 import time
-import pandas as pd
+import pandas as pd # type: ignore
 
 def sum_of_n_init(n):
     acumul_acelerate = 0
@@ -84,7 +84,7 @@ def get_results(arr, sort_type):
 
 if __name__ == "__main__":
     df = pd.DataFrame(columns=['arr_length', 'sort', 'memory_spent', 'process_time', 'cycles'])
-    for size in [10, 100, 1000, 10000, 100000, 1000000, 10000000]:
+    for size in [10, 100, 1000, 10000, 100000]:
         arr = declare_arr(size)
         for sort_type in ['bubble', 'quick']:
             memory_spent, process_time, cycles = get_results(arr[:], sort_type)

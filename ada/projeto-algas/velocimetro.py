@@ -1,7 +1,7 @@
 import random
-from memory_profiler import memory_usage
+from memory_profiler import memory_usage # type: ignore
 import time
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt # type: ignore
 import sys
 sys.setrecursionlimit(5000)
 
